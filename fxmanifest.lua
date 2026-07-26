@@ -18,10 +18,15 @@ lua54 'yes'
 author '<benewww.pro@gmail.com>, dc: domiciliation'
 use_experimental_fivem_natives 'yes'
 ui_page { 'ui/app/index.html' }
-client_script 'modules/**/CLib.lua'
+client_scripts {
+  'modules/**/CLib.lua',
+  'modules/**/CHud.lua',
+}
 files { 'ui/**/*' }
 
 exports {'createMenu', 'setMenuOptions',
          'openMenu','closeMenu',
          'backMenu', 'getOpenMenu',
+         'setHud', 'setHudThirst', 'setHudFood',
+         'showHud', 'hideHud',
 }
